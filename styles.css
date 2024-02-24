@@ -1,0 +1,252 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+header {
+  background-color: #58a4b0;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  font-weight: 300;
+}
+
+nav a, .action-buttons a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #4c956c;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover, .action-buttons a:hover {
+  background-color: #3b6b52;
+}
+
+main {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.features section {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #58a4b0;
+}
+
+input[type="email"], input[type="password"], input[type="text"], input[type="submit"], button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  color: #333;
+}
+
+input[type="submit"], button {
+  background-color: #4c956c;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover, button:hover {
+  background-color: #3b6b52;
+}
+
+.center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.word-grid, #sentence-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.action-buttons {
+  text-align: center; /* This ensures the buttons are centered */
+  margin-top: 20px; /* Adds some space above the buttons for visual separation */
+}
+
+/* Targeting buttons within the action-buttons container for uniform sizing */
+.action-buttons a {
+  width: 150px; /* Sets a specific width for all buttons */
+  height: 40px; /* Sets a specific height for all buttons */
+  line-height: 40px; /* This should vertically center the text within the button */
+  margin: 0 10px; /* Adds horizontal space between the buttons */
+  display: inline-block; /* Keeps the buttons in-line */
+  text-align: center; /* Ensures text is centered within the button */
+  padding: 0; /* Adjusting padding to 0 to rely on height and line-height for sizing */
+  vertical-align: middle; /* Ensures the buttons align correctly with each other */
+}
+
+.exercise-prompt {
+  margin-bottom: 20px; /* Increase the bottom margin for more space between text and buttons */
+  font-size: 1.2rem; /* Optional: Adjust font size for better readability */
+  text-align: center; /* Ensures the prompt text is centered */
+}
+
+.options-container {
+  margin-top: 20px; /* Adds space above the container holding the buttons, if needed */
+}
+
+.option-button {
+  margin: 10px 5px; /* Adds margin around each button for spacing */
+  padding: 10px 20px; /* Adjust padding as needed for button content */
+  /* Other existing button styles */
+}
+
+/* Responsive Media Queries */
+
+/* For tablets */
+@media (max-width: 1024px) {
+  body {
+    font-size: 18px; /* Increase the base font size for better readability */
+  }
+
+  header h1 {
+    font-size: 24px; /* Increase the font size of the header title */
+  }
+
+  main p, .features section p, form input, form button, .option-button {
+    font-size: 16px; /* Increase font size for paragraphs, inputs, and buttons */
+  }
+
+  .action-buttons a, .option-button {
+    .action-buttons a {
+      width: auto; /* Adjusts button width to content plus padding */
+      padding: 12px 24px; /* Provides ample clickable area and helps with vertical centering */
+      margin: 8px auto; /* Centers buttons and provides spacing between them when stacked */
+      box-sizing: border-box; /* Ensures padding is included in the button's dimensions */
+      display: flex; /* Enables Flexbox for button content */
+      justify-content: center; /* Centers content horizontally */
+      align-items: center; /* Centers content vertically */
+      height: auto; /* Allows button height to adjust based on content and padding */
+      min-height: 44px; /* Ensures buttons have a minimum height for better touch interaction */
+      line-height: normal; /* Resets line-height to default to work well with flexbox */
+    }
+  }
+
+  .icon {
+    font-size: 40px; /* Slightly larger icons for better visibility */
+    margin-bottom: 15px;
+  }
+
+  input[type="email"], input[type="password"], input[type="text"], input[type="submit"], button {
+    padding: 12px; /* Increase padding for a better touch experience */
+    margin-bottom: 15px; /* Adjust spacing between form elements */
+  }
+
+  .features section {
+    padding: 20px; /* Increase padding for feature sections for better spacing */
+  }
+
+  .word-grid, #sentence-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust grid layout for better spacing */
+  }
+}
+
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .flex {
+    flex-direction: column; /* Stacks flex items vertically on small screens */
+    gap: 10px; /* Adjusts spacing for vertical layout */
+  }
+
+  .action-buttons {
+    flex-direction: column; /* Stacks buttons vertically for narrow screens */
+  }
+
+  .action-buttons a {
+    display: inline-flex; /* Use inline-flex to keep buttons in line */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    width: auto; /* Allow button width to adjust based on content */
+    padding: 12px 20px; /* Adjust vertical padding for centering, horizontal for spacing */
+    height: auto; /* Let height be determined by content and padding */
+    font-size: 16px; /* Ensure font size is adequate for mobile screens */
+    margin: 8px; /* Ensure some space around buttons */
+    line-height: 1.2; /* Normal line height for button text */
+    text-align: center; /* Ensure text is centered (redundant with flex, but added for safety) */
+  }
+
+  header {
+    padding: 15px 0; /* Reduces padding to save space */
+  }
+
+  .features section {
+    margin: 10px 0; /* Less margin for compact layout */
+  }
+
+  .exercise-prompt, .options-container {
+    margin-bottom: 15px; /* Adjusts spacing for a tighter layout */
+  }
+
+  form {
+    width: 100%; /* Ensures form takes full width of its container */
+    padding: 0 15px; /* Adds some padding inside the form for smaller screens */
+    box-sizing: border-box; /* Ensures padding does not add to the form's width */
+  }
+
+  input[type="email"], input[type="password"], input[type="text"], input[type="submit"], button {
+    padding: 10px; /* Sufficient for touch targets without causing layout shifts */
+    margin: 0 0 15px; /* Add some space below each input field */
+  }
+}
+
+
+
+
